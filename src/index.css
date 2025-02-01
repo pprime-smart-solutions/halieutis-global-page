@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #458EEF;
+  --color-primary: #458eef;
   --color-gray: #ccc;
+}
+
+body {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    url("./assets/Pattern1.jpg");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
 }
