@@ -11,91 +11,72 @@ import Hub from "./assets/PDever Hub.svg";
 import Box from "./assets/PDever Box.svg";
 
 function App() {
-    return (
-        // Salon Halieutis
-        // <div className='flex flex-col justify-center items-center h-screen -mt-32'>
-        //     <img src={Logo} alt="Pprime Logo" className='w-[750px]' />
-        //     <div className='flex flex-col justify-between items-center -mt-28'>
-        //         <div className='flex justify-baseline items-center'>
-        //             <a href='http://192.168.1.10:8024' className='m-12 p-3 rounded-md'>
-        //                 <img src={PFish} alt="" width={150} />
-        //             </a>
-        //             <a href='http://192.168.1.10:8022' className='m-8 p-3 rounded-md'>
-        //                 <img src={PEnergy} alt="" width={170} />
-        //             </a>
-        //             <a href='http://192.168.1.10:8020' className='m-8 p-3 rounded-md'>
-        //                 <img src={PBoiler} alt="" width={150} />
-        //             </a>
-        //             <a href='http://192.168.1.10:8021' className='m-8 p-3 rounded-md'>
-        //                 <img src={POil} alt="" width={140} />
-        //             </a>
-        //         </div>
-        //         <div className='flex justify-between items-center'>
-        //             <a href='http://192.168.1.10:8023' className='m-8 p-3 rounded-md'>
-        //                 <img src={PWater} alt="" width={150} />
-        //             </a>
-        //             <a href='http://192.168.1.10:8026' className='m-8 p-3 rounded-md'>
-        //                 <img src={PSense} alt="" width={150} />
-        //             </a>
-        //             <a href='http://192.168.1.10:8025' className='m-8 p-3 rounded-md'>
-        //                 <img src={PDever} alt="" width={110} />
-        //             </a>
-        //         </div>
-        //     </div>
-        // </div>
+    const allapps = [
+        { name: "Humidification", logo: Humidification, ipPort: "127.0.0.1:8010", width: 140 },
+        { name: "PDever HUB", logo: Hub, ipPort: "127.0.0.1:8011", width: 110 },
+        { name: "PDever BOX", logo: Box, ipPort: "127.0.0.1:8012", width: 110 },
+        { name: "Desinfection", logo: "", ipPort: "127.0.0.1:8013", width: 110 },
 
-        // Salon Sidi kacem
-        // Solutions List:
-        // ============ Tablet ============
-        // -- PWater
-        // -- PSense
-        // -- PEnergy
-        // -- PDever Cloud
-        // -- PTrack Fruit
-        // <div className="flex flex-col justify-center items-center h-screen -mt-32">
-        //     <img src={Logo} alt="Pprime Logo" className="w-[750px]" />
-        //     <div className="flex flex-col justify-between items-center -mt-28">
-        //         <div className="flex justify-baseline items-center">
-        //             <a href="http://192.168.1.10:8022" className="m-8 p-3 rounded-md">
-        //                 <img src={PEnergy} alt="" width={170} />
-        //             </a>
-        //             <a href="http://192.168.1.10:8023" className="m-8 p-3 rounded-md">
-        //                 <img src={PWater} alt="" width={150} />
-        //             </a>
-        //             <a href="http://192.168.1.10:8026" className="m-8 p-3 rounded-md">
-        //                 <img src={PSense} alt="" width={150} />
-        //             </a>
-        //             <a href="http://192.168.1.10:8025" className="m-8 p-3 rounded-md">
-        //                 <img src={PDever} alt="" width={110} />
-        //             </a>
-        //             <a href="http://192.168.1.10:8025" className="m-8 p-3 rounded-md">
-        //                 <img src='' alt="pfruit" width={110} />
-        //             </a>
-        //         </div>
-        //     </div>
-        // </div>
-        // ============ Coffret ============
-        // -- Humidification
-        // -- PDever HUB
-        // -- PDever BOX
-        // -- Desinfection
+        { name: "PFish", logo: PFish, ipPort: "127.0.0.1:8014", width: 150 },
+        { name: "PBoiler", logo: PBoiler, ipPort: "127.0.0.1:8016", width: 150 },
+        { name: "POil", logo: POil, ipPort: "127.0.0.1:8017", width: 140 },
+
+        { name: "PWater", logo: PWater, ipPort: "127.0.0.1:8018", width: 150 },
+        { name: "PSense", logo: PSense, ipPort: "127.0.0.1:8019", width: 150 },
+        { name: "PEnergy", logo: PEnergy, ipPort: "127.0.0.1:8015", width: 170 },
+        { name: "PDever Cloud", logo: PDever, ipPort: "127.0.0.1:8020", width: 110 },
+        { name: "PTrack Fruit", logo: "", ipPort: "127.0.0.1:8021", width: 110 }
+    ];
+
+
+    const tabletApps = [
+        { name: "PWater", logo: PWater, ipPort: "127.0.0.1:8018", width: 150 },
+        { name: "PSense", logo: PSense, ipPort: "127.0.0.1:8019", width: 150 },
+        { name: "PEnergy", logo: PEnergy, ipPort: "127.0.0.1:8015", width: 170 },
+        { name: "PDever Cloud", logo: PDever, ipPort: "127.0.0.1:8020", width: 110 },
+        { name: "PTrack Fruit", logo: "", ipPort: "127.0.0.1:8021", width: 110 }
+    ]
+
+    const cofferetApps = [
+        { name: "Humidification", logo: Humidification, ipPort: "127.0.0.1:8010", width: 140 },
+        { name: "PDever HUB", logo: Hub, ipPort: "127.0.0.1:8011", width: 110 },
+        { name: "PDever BOX", logo: Box, ipPort: "127.0.0.1:8012", width: 110 },
+        { name: "Desinfection", logo: "", ipPort: "127.0.0.1:8013", width: 110 },
+    ]
+
+    // Split apps into chunks of 4
+    const chunkArray = (array, chunkSize) => {
+        const chunks = [];
+        for (let i = 0; i < array.length; i += chunkSize) {
+            chunks.push(array.slice(i, i + chunkSize));
+        }
+        return chunks;
+    };
+
+    // const appRows = chunkArray(tabletApps, 3);
+    const appRows = chunkArray(cofferetApps, 3);
+
+    return (
         <div className="flex flex-col justify-center items-center h-screen -mt-32">
             <img src={Logo} alt="Pprime Logo" className="w-[750px]" />
             <div className="flex flex-col justify-between items-center -mt-28">
-                <div className="flex justify-baseline items-center">
-                    <a href="http://192.168.1.10:8022" className="m-8 p-3 rounded-md">
-                        <img src={Humidification} alt="" width={140} />
-                    </a>
-                    <a href="http://192.168.1.10:8023" className="m-8 p-3 rounded-md">
-                        <img src={Hub} alt="" width={110} />
-                    </a>
-                    <a href="http://192.168.1.10:8026" className="m-8 p-3 rounded-md">
-                        <img src={Box} alt="" width={110} />
-                    </a>
-                    <a href="http://192.168.1.10:8025" className="m-8 p-3 rounded-md">
-                        <img src="" alt="Desinfection" width={110} />
-                    </a>
-                </div>
+                {appRows.map((row, rowIndex) => (
+                    <div key={rowIndex} className="flex justify-baseline items-center">
+                        {row.map((app, index) => (
+                            <a
+                                key={index}
+                                href={`http://${app.ipPort}`}
+                                className="m-8 p-3 rounded-md"
+                            >
+                                <img
+                                    src={app.logo}
+                                    alt={app.name}
+                                    width={app.width}
+                                />
+                            </a>
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
     );
