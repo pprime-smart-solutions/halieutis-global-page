@@ -39,9 +39,9 @@ function App() {
     ]
 
     const sidiKacemcofferetApps = [
-        { name: "Humidification", logo: Humidification, ipPort: "194.164.76.81:8010", width: 150 },
-        { name: "Desinfection", logo: Desinfection, ipPort: "194.164.76.81:8013", width: 140 },
-        { name: "PDever BOX", logo: Box, ipPort: "194.164.76.81:8012", width: 120 },
+        { name: "Humidification", logo: Humidification, ipPort: "localhost:8010", width: 150 },
+        { name: "Desinfection", logo: Desinfection, ipPort: "localhost:8013", width: 140 },
+        { name: "PDever BOX", logo: Box, ipPort: "localhost:8012", width: 120 },
     ]
 
 
