@@ -10,6 +10,7 @@ import Humidification from "./assets/Humidification 1.svg";
 import Hub from "./assets/PDever Hub.svg";
 import Box from "./assets/PDever Box.svg";
 import Desinfection from "./assets/Desinfection.svg";
+import PTrackFruit from "./assets/FruitTrack 2.svg";
 
 function App() {
     const allapps = [
@@ -26,7 +27,7 @@ function App() {
         { name: "PSense", logo: PSense, ipPort: "194.164.76.81:8019", width: 150 },
         { name: "PEnergy", logo: PEnergy, ipPort: "194.164.76.81:8015", width: 170 },
         { name: "PDever Cloud", logo: PDever, ipPort: "194.164.76.81:8020", width: 110 },
-        { name: "PTrack Fruit", logo: "", ipPort: "194.164.76.81:8021", width: 110 }
+        { name: "PTrack Fruit", logo: PTrackFruit, ipPort: "194.164.76.81:8021", width: 110 }
     ];
 
 
@@ -35,7 +36,7 @@ function App() {
         { name: "PSense", logo: PSense, ipPort: "194.164.76.81:8019", width: 150 },
         { name: "PEnergy", logo: PEnergy, ipPort: "194.164.76.81:8015", width: 170 },
         { name: "PDever Cloud", logo: PDever, ipPort: "194.164.76.81:8020", width: 110 },
-        { name: "PTrack Fruit", logo: "", ipPort: "194.164.76.81:8021", width: 110 }
+        { name: "PTrack Fruit", logo: PTrackFruit, ipPort: "194.164.76.81:8021", width: 120 }
     ]
 
     const sidiKacemcofferetApps = [
@@ -62,9 +63,9 @@ function App() {
         return chunks;
     };
 
-    // const appRows = chunkArray(TropheeClimatiqueApps, 3);
+    const appRows = chunkArray(TropheeClimatiqueApps, 3);
     // const appRows = chunkArray(sidiKacemtabletApps, 3);
-    const appRows = chunkArray(sidiKacemcofferetApps, 3);
+    // const appRows = chunkArray(sidiKacemcofferetApps, 3);
 
     return (
         <div className="flex flex-col justify-center items-center h-screen -mt-32">
