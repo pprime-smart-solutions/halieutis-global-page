@@ -54,6 +54,17 @@ function App() {
         { name: "PEnergy", logo: PEnergy, ipPort: "194.164.76.81:8015", width: 150 },
     ];
 
+
+    const allTabletApps = [
+        { name: "PWater", logo: PWater, ipPort: "194.164.76.81:8041", width: 150 },
+        { name: "PSense", logo: PSense, ipPort: "194.164.76.81:8042", width: 150 },
+        { name: "PEnergy", logo: PEnergy, ipPort: "194.164.76.81:8043", width: 150 },
+        { name: "POil", logo: POil, ipPort: "194.164.76.81:8044", width: 115 },
+        { name: "PFish", logo: PFish, ipPort: "194.164.76.81:8045", width: 150 },
+        { name: "PDever Cloud", logo: PDever, ipPort: "194.164.76.81:8034", width: 110 },
+        { name: "PTrack Fruit", logo: PTrackFruit, ipPort: "194.164.76.81:8035", width: 120 }
+    ]
+
     // Split apps into chunks of 4
     const chunkArray = (array, chunkSize) => {
         const chunks = [];
@@ -63,7 +74,7 @@ function App() {
         return chunks;
     };
 
-    const appRows = chunkArray(TropheeClimatiqueApps, 3);
+    const appRows = chunkArray(allTabletApps, 4);
     // const appRows = chunkArray(sidiKacemtabletApps, 3);
     // const appRows = chunkArray(sidiKacemcofferetApps, 3);
 
