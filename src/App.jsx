@@ -13,6 +13,7 @@ import Desinfection from "./assets/Desinfection.svg";
 import PTrackFruit from "./assets/FruitTrack 2.svg";
 
 function App() {
+    
     const allapps = [
         { name: "Humidification", logo: Humidification, ipPort: "194.164.76.81:8010", width: 140 },
         { name: "PDever HUB", logo: Hub, ipPort: "194.164.76.81:8011", width: 110 },
